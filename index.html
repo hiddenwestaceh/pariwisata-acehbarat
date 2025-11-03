@@ -6,58 +6,64 @@
   <title>Pesona Aceh Barat | Promosi Pariwisata</title>
   <meta name="description" content="Website promosi pariwisata Aceh Barat — menampilkan keindahan alam, budaya, dan kuliner khas.">
   <style>
-    /* Global */
     body {font-family: Arial, sans-serif; margin:0; padding:0; background:#f5f6fa;}
+    header {color:white; text-align:center;}
+    nav {background:#003d80; text-align:center; padding:10px;}
+    nav a {color:white; margin:0 15px; text-decoration:none; font-weight:bold;}
+    nav a:hover {text-decoration:underline;}
+    section {padding:20px; max-width:900px; margin:auto;}
     h2 {color:#003d80;}
     .card {background:white; padding:15px; border-radius:10px; margin-bottom:20px; box-shadow:0 2px 6px rgba(0,0,0,0.1);}
-    a {text-decoration:none;}
-    
-    /* Header */
-    header {position: relative; color:white; text-align:center;}
-    header .overlay {background-color: rgba(0,0,0,0.5); padding:40px; border-radius:10px; display:flex; align-items:center; justify-content:center; gap:20px; flex-wrap:wrap;}
-    header .overlay img {width:80px; height:80px; border-radius:50%; object-fit:cover;}
-
-    /* Navbar */
-    nav {background:#003d80; text-align:center; padding:10px;}
-    nav a {color:white; margin:0 15px; font-weight:bold;}
-    nav a:hover {text-decoration:underline;}
-
-    /* Sections */
-    section {padding:20px; max-width:900px; margin:auto;}
-
-    /* Galeri */
-    .galeri-container {display:flex; justify-content:center; gap:15px; flex-wrap:wrap; margin-top:20px;}
-    .galeri-item {width:30%; background:white; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.1); text-align:center; padding:10px;}
-    .galeri-item img {width:100%; border-radius:8px;}
-    .galeri-item p {margin-top:8px; font-weight:bold;}
-
-    /* Footer */
     footer {background:#003d80; color:white; text-align:center; padding:15px;}
-
-    /* Responsive */
-    @media (max-width: 768px){
-      .galeri-item {width: 45%;}
-      header .overlay {flex-direction: column;}
-    }
-    @media (max-width: 480px){
-      .galeri-item {width: 100%;}
-    }
+    /* Galeri Horizontal */
+    .galeri-container {display:flex; overflow-x:auto; gap:15px; padding:10px;}
+    .galeri-item {flex:0 0 auto; width:200px; background:white; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.1); text-align:center; padding:10px;}
+    .galeri-item img {width:100%; border-radius:8px; object-fit:cover;}
+    .galeri-item p {margin-top:8px; font-weight:bold;}
   </style>
 </head>
 <body>
 
-  <!-- Header -->
-  <header style="background-image: url('images/pemandangan indah.jpeg'); background-size:cover; background-position:center; background-repeat:no-repeat; padding:100px 20px;">
-    <div class="overlay">
-      <img src="images/logo destinasi.jpg.png" alt="Logo HIDDENWESTACEH">
-      <div>
-        <h1 style="font-size:36px; margin:0;">HIDDENWESTACEH</h1>
-        <p style="font-size:18px;">Promosi Pariwisata Aceh Barat</p>
-      </div>
+  <!-- HEADER -->
+  <header style="
+  background-image: url('images/pemandangan indah.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 60px 20px;
+">
+  <div style="
+    background-color: rgba(0,0,0,0.5);
+    padding: 20px 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;       /* Vertikal center logo & teks */
+    justify-content: center;   /* Horizontal center container */
+    gap: 20px;
+    max-width: 800px;
+    margin: auto;
+  ">
+    <!-- Logo Bulat -->
+    <img src="images/logo destinasi.jpg" alt="Logo HiddenWestAceh" style="
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid white;
+      flex-shrink: 0;
+    ">
+    
+    <!-- Teks -->
+    <div style="color:white; text-align:center;">
+      <h1 style="font-size:36px; margin:0;">HIDDENWESTACEH</h1>
+      <p style="font-size:18px; margin:5px 0 0 0;">Promosi Pariwisata Aceh Barat</p>
     </div>
-  </header>
+  </div>
+</header>
 
-  <!-- Navbar -->
+
+
+  <!-- NAVIGASI -->
   <nav>
     <a href="#beranda">Beranda</a>
     <a href="#destinasi">Destinasi</a>
@@ -66,65 +72,62 @@
     <a href="#kontak">Kontak</a>
   </nav>
 
-  <!-- Beranda -->
+  <!-- BERANDA -->
   <section id="beranda">
     <div class="card">
       <h2>Selamat Datang di Aceh Barat</h2>
-      <p>Kabupaten Aceh Barat memiliki keindahan alam yang memukau, mulai dari pantai, pegunungan, hingga budaya yang kaya. Melalui website ini, kami memperkenalkan berbagai potensi pariwisata yang dapat menjadi daya tarik bagi wisatawan lokal maupun mancanegara.</p>
-      <p>Komunikasi pemasaran ini bertujuan untuk meningkatkan citra positif Aceh Barat sebagai destinasi wisata yang menarik dan berbudaya.</p>
+      <p>
+        Kabupaten Aceh Barat memiliki keindahan alam yang memukau, mulai dari pantai, pegunungan, hingga budaya yang kaya.
+        Melalui website ini, kami memperkenalkan berbagai potensi pariwisata yang dapat menjadi daya tarik bagi wisatawan lokal maupun mancanegara.
+      </p>
+      <p>
+        Komunikasi pemasaran ini bertujuan untuk meningkatkan citra positif Aceh Barat sebagai destinasi wisata yang menarik dan berbudaya.
+      </p>
     </div>
   </section>
 
-  <!-- Destinasi -->
+  <!-- DESTINASI -->
   <section id="destinasi">
-  <div class="card">
-    <h2>Destinasi Wisata Unggulan</h2>
-    <ul>
-      <li><strong>Pantai Lhok Bubon</strong> — pantai indah dengan pasir putih dan matahari terbenam yang memukau.</li>
-      <li><strong>Air Terjun Suhom</strong> — destinasi alam yang menenangkan dengan udara sejuk dan pemandangan hijau.</li>
-      <li><strong>Museum Cut Nyak Dien</strong> — wisata sejarah dan budaya yang memperkenalkan perjuangan pahlawan Aceh.</li>
-      <li><strong>Pantai Uweh</strong> — tempat bersantai dengan pemandangan laut yang menawan.</li>
-      <li><strong>Gunung Leuser</strong> — destinasi trekking dan melihat alam Aceh Barat dari ketinggian.</li>
-    </ul>
-  </div>
-</section>
+    <div class="card">
+      <h2>Destinasi Wisata Unggulan</h2>
+      <ul>
+        <li><strong>Pantai Lhok Bubon</strong> — pantai indah dengan pasir putih dan matahari terbenam yang memukau.</li>
+        <li><strong>Air Terjun Suhom</strong> — destinasi alam yang menenangkan dengan udara sejuk dan pemandangan hijau.</li>
+        <li><strong>Museum Cut Nyak Dien</strong> — wisata sejarah dan budaya yang memperkenalkan perjuangan pahlawan Aceh.</li>
+        <li><strong>Pantai Uweh</strong> — tempat bersantai dengan pemandangan laut yang menawan.</li>
+        <li><strong>Gunung Leuser</strong> — destinasi trekking dan melihat alam Aceh Barat dari ketinggian.</li>
+      </ul>
+    </div>
+  </section>
 
-
-  <!-- Galeri -->
+  <!-- GALERI -->
   <section id="galeri">
-  <h2 style="text-align:center; color:#003d80;">Galeri Wisata Aceh Barat</h2>
-  <div style="display:flex; overflow-x:auto; gap:15px; padding:10px;">
-    <!-- Gambar 1 -->
-    <div style="flex: 0 0 auto; width:200px; background:white; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.1); text-align:center; padding:10px;">
-      <img src="images/logo forko.png" alt="Pantai Lhok Bubon" style="width:100%; border-radius:8px;">
-      <p style="margin-top:8px; font-weight:bold;">Pantai Lhok Bubon</p>
+    <h2 style="text-align:center; color:#003d80;">Galeri Wisata Aceh Barat</h2>
+    <div class="galeri-container">
+      <div class="galeri-item">
+        <img src="images/logo forko.png" alt="Pantai Lhok Bubon">
+        <p>Pantai Lhok Bubon</p>
+      </div>
+      <div class="galeri-item">
+        <img src="images/airterjun.jpg" alt="Air Terjun Suhom">
+        <p>Air Terjun Suhom</p>
+      </div>
+      <div class="galeri-item">
+        <img src="images/museum.jpg" alt="Museum Cut Nyak Dien">
+        <p>Museum Cut Nyak Dien</p>
+      </div>
+      <div class="galeri-item">
+        <img src="images/pantai-uweh.jpg" alt="Pantai Uweh">
+        <p>Pantai Uweh</p>
+      </div>
+      <div class="galeri-item">
+        <img src="images/logo forko.png" alt="Gunung Leuser">
+        <p>Gunung Leuser</p>
+      </div>
     </div>
-    <!-- Gambar 2 -->
-    <div style="flex: 0 0 auto; width:200px; background:white; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.1); text-align:center; padding:10px;">
-      <img src="images/airterjun.jpg" alt="Air Terjun Suhom" style="width:100%; border-radius:8px;">
-      <p style="margin-top:8px; font-weight:bold;">Air Terjun Suhom</p>
-    </div>
-    <!-- Gambar 3 -->
-    <div style="flex: 0 0 auto; width:200px; background:white; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.1); text-align:center; padding:10px;">
-      <img src="images/museum.jpg" alt="Museum Cut Nyak Dien" style="width:100%; border-radius:8px;">
-      <p style="margin-top:8px; font-weight:bold;">Museum Cut Nyak Dien</p>
-    </div>
-    <!-- Gambar 4 -->
-    <div style="flex: 0 0 auto; width:200px; background:white; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.1); text-align:center; padding:10px;">
-      <img src="images/pantai-uweh.jpg" alt="Pantai Uweh" style="width:100%; border-radius:8px;">
-      <p style="margin-top:8px; font-weight:bold;">Pantai Uweh</p>
-    </div>
-    <!-- Gambar 5 -->
-    <div style="flex: 0 0 auto; width:200px; background:white; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.1); text-align:center; padding:10px;">
-      <img src="images/logo forko.png" alt="Gunung Leuser" style="width:100%; border-radius:8px;">
-      <p style="margin-top:8px; font-weight:bold;">Gunung Leuser</p>
-    </div>
-  </div>
-</section>
+  </section>
 
-
-
-  <!-- Kuliner & Budaya -->
+  <!-- KULINER & BUDAYA -->
   <section id="kuliner">
     <div class="card">
       <h2>Kuliner & Budaya</h2>
@@ -138,17 +141,17 @@
     </div>
   </section>
 
-  <!-- Kontak -->
+  <!-- KONTAK -->
   <section id="kontak">
     <div class="card">
       <h2>Ayo Kunjungi Aceh Barat!</h2>
       <p>Ingin tahu lebih banyak? Hubungi kami di:</p>
       <p>Email: <a href="mailto:hiddenwestaceh@gmail.com">hiddenwestaceh@gmail.com</a></p>
-      <p>Instagram: <a href="https://www.instagram.com/hiddenwestaceh/?utm_source=ig_web_button_share_sheet" target="_blank">@hiddenwestaceh</a></p>
+      <p>Instagram: <a href=" https://www.instagram.com/hiddenwestaceh/?utm_source=ig_web_button_share_sheet" target="_blank">@hiddenwestaceh</a></p>
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- FOOTER -->
   <footer>
     <p>© 2025 Pesona Aceh Barat</p>
   </footer>
