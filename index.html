@@ -15,53 +15,77 @@
     h2 {color:#003d80;}
     .card {background:white; padding:15px; border-radius:10px; margin-bottom:20px; box-shadow:0 2px 6px rgba(0,0,0,0.1);}
     footer {background:#003d80; color:white; text-align:center; padding:15px;}
+
     /* Galeri Horizontal */
-    .galeri-container {display:flex; overflow-x:auto; gap:15px; padding:10px;}
-    .galeri-item {flex:0 0 auto; width:200px; background:white; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.1); text-align:center; padding:10px;}
-    .galeri-item img {width:100%; border-radius:8px; object-fit:cover;}
-    .galeri-item p {margin-top:8px; font-weight:bold;}
+    .galeri-container, .kuliner-container {
+      display:flex;
+      overflow-x:auto;
+      gap:15px;
+      padding:10px;
+    }
+    .galeri-item, .kuliner-item {
+      flex:0 0 auto;
+      width:200px;
+      background:white;
+      border-radius:10px;
+      box-shadow:0 2px 6px rgba(0,0,0,0.1);
+      text-align:center;
+      padding:10px;
+    }
+    .galeri-item img, .kuliner-item img {
+      width:100%;
+      border-radius:8px;
+      object-fit:cover;
+    }
+    .galeri-item p, .kuliner-item p {
+      margin-top:8px;
+      font-weight:bold;
+    }
+    .kuliner-item span {
+      font-weight:normal;
+      font-size:14px;
+      color:#555;
+    }
   </style>
 </head>
 <body>
 
   <!-- HEADER -->
   <header style="
-  background-image: url('images/pemandangan indah.jpeg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: 60px 20px;
-">
-  <div style="
-    background-color: rgba(0,0,0,0.5);
-    padding: 20px 40px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;       /* Vertikal center logo & teks */
-    justify-content: center;   /* Horizontal center container */
-    gap: 20px;
-    max-width: 800px;
-    margin: auto;
+    background-image: url('images/pemandangan indah.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 60px 20px;
   ">
-    <!-- Logo Bulat -->
-    <img src="images/logo destinasi.jpg" alt="Logo HiddenWestAceh" style="
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid white;
-      flex-shrink: 0;
+    <div style="
+      background-color: rgba(0,0,0,0.5);
+      padding: 20px 40px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      max-width: 800px;
+      margin: auto;
     ">
-    
-    <!-- Teks -->
-    <div style="color:white; text-align:center;">
-      <h1 style="font-size:36px; margin:0;">HIDDENWESTACEH</h1>
-      <p style="font-size:18px; margin:5px 0 0 0;">Promosi Pariwisata Aceh Barat</p>
+      <!-- Logo Bulat -->
+      <img src="images/logo destinasi.jpg" alt="Logo HiddenWestAceh" style="
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid white;
+        flex-shrink: 0;
+      ">
+      
+      <!-- Teks -->
+      <div style="color:white; text-align:center;">
+        <h1 style="font-size:36px; margin:0;">HIDDENWESTACEH</h1>
+        <p style="font-size:18px; margin:5px 0 0 0;">Promosi Pariwisata Aceh Barat</p>
+      </div>
     </div>
-  </div>
-</header>
-
-
+  </header>
 
   <!-- NAVIGASI -->
   <nav>
@@ -121,7 +145,7 @@
         <p>Pantai Uweh</p>
       </div>
       <div class="galeri-item">
-        <img src="images/logo forko.png" alt="Gunung Leuser">
+        <img src="images/gunung-leuser.jpg" alt="Gunung Leuser">
         <p>Gunung Leuser</p>
       </div>
     </div>
@@ -129,15 +153,33 @@
 
   <!-- KULINER & BUDAYA -->
   <section id="kuliner">
-    <div class="card">
-      <h2>Kuliner & Budaya</h2>
-      <p>Aceh Barat terkenal dengan kekayaan kulinernya seperti:</p>
-      <ul>
-        <li><strong>Kopi Ulee Kareng</strong> — cita rasa khas Aceh yang mendunia.</li>
-        <li><strong>Mie Aceh</strong> — makanan favorit dengan bumbu rempah yang kuat.</li>
-        <li><strong>Kuah Beulangong</strong> — hidangan tradisional yang wajib dicoba saat acara adat.</li>
-      </ul>
-      <p>Selain kuliner, budaya Aceh Barat juga sarat nilai religius, gotong royong, dan seni tradisi seperti tari saman dan seudati.</p>
+    <h2 style="text-align:center; color:#003d80;">Kuliner & Budaya Aceh Barat</h2>
+    <div class="kuliner-container">
+      <div class="kuliner-item">
+        <img src="images/kopi-ulee-kareng.jpg" alt="Kopi Ulee Kareng">
+        <p>Kopi Ulee Kareng</p>
+        <span>Cita rasa khas Aceh yang mendunia.</span>
+      </div>
+      <div class="kuliner-item">
+        <img src="images/mie-aceh.jpg" alt="Mie Aceh">
+        <p>Mie Aceh</p>
+        <span>Makanan favorit dengan bumbu rempah kuat.</span>
+      </div>
+      <div class="kuliner-item">
+        <img src="images/kuah-beulangong.jpg" alt="Kuah Beulangong">
+        <p>Kuah Beulangong</p>
+        <span>Hidangan tradisional wajib dicoba.</span>
+      </div>
+      <div class="kuliner-item">
+        <img src="images/nasi-gulai.jpg" alt="Nasi Gulai">
+        <p>Nasi Gulai</p>
+        <span>Makanan lezat khas Aceh Barat.</span>
+      </div>
+      <div class="kuliner-item">
+        <img src="images/roti-tiang.jpg" alt="Roti Tiang">
+        <p>Roti Tiang</p>
+        <span>Hidangan manis tradisional Aceh.</span>
+      </div>
     </div>
   </section>
 
@@ -147,7 +189,8 @@
       <h2>Ayo Kunjungi Aceh Barat!</h2>
       <p>Ingin tahu lebih banyak? Hubungi kami di:</p>
       <p>Email: <a href="mailto:hiddenwestaceh@gmail.com">hiddenwestaceh@gmail.com</a></p>
-      <p>Instagram: <a href=" https://www.instagram.com/hiddenwestaceh/?utm_source=ig_web_button_share_sheet" target="_blank">@hiddenwestaceh</a></p>
+      <p>Instagram: <a href="https://www.instagram.com/hiddenwestaceh/" target="_blank">@hiddenwestaceh</a></p>
+      <p>TikTok: <a href="https://www.tiktok.com/@hidden.west.aceh?_r=1&_t=ZS-910KWV6LyHl" target="_blank">hidden.west.aceh</a></p>
     </div>
   </section>
 
