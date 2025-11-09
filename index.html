@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8">
@@ -14,17 +14,27 @@
       color: #333;
     }
 
-    /* Header */
+    /* HEADER VIDEO */
     header {
+      position: relative;
+      height: 350px;
+      overflow: hidden;
       color: white;
       text-align: center;
-      background-image: url('images/pemandangan indah.jpeg');
-      background-size: cover;
-      background-position: center;
-      padding: 60px 20px;
+    }
+
+    header video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     header .overlay {
+      position: relative;
+      z-index: 1;
       background-color: rgba(0, 0, 0, 0.55);
       padding: 25px 40px;
       border-radius: 12px;
@@ -34,6 +44,8 @@
       gap: 25px;
       max-width: 800px;
       margin: auto;
+      top: 50%;
+      transform: translateY(-50%);
     }
 
     header img {
@@ -133,67 +145,23 @@
       padding: 30px 40px;
     }
 
-    .footer-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-
-    .footer-left h3 {
-      margin-bottom: 10px;
-    }
-
-    .footer-left div {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 8px;
-    }
-
-    .footer-left img {
-      width: 24px;
-      height: 24px;
-    }
-
-    .footer-left a {
-      color: white;
-      text-decoration: none;
-    }
-
-    .footer-left a:hover {
-      text-decoration: underline;
-    }
-
     .footer-right {
       display: flex;
       justify-content: flex-end;
       align-items: center;
-      gap: 15px;
-      margin-left: auto;
+      gap: 5px;
+      padding-right: 20px;
+      flex-wrap: wrap;
     }
 
     .footer-right img {
       object-fit: cover;
-      border-radius: 10px;
-    }
-
-    .footer-right img:first-child {
       border-radius: 50%;
+      transition: transform 0.3s ease;
     }
 
-    footer hr {
-      margin: 20px 0;
-      border: 0;
-      border-top: 1px solid rgba(255, 255, 255, 0.2);
-    }
-
-    footer p {
-      text-align: center;
-      font-size: 14px;
-      color: #ddd;
-      margin: 0;
+    .footer-right img:hover {
+      transform: scale(1.1);
     }
 
     /* Partner Section */
@@ -233,8 +201,13 @@
 
 <body>
 
-  <!-- HEADER -->
+  <!-- HEADER DENGAN VIDEO -->
   <header>
+    <video autoplay muted loop playsinline>
+      <source src="vidio/Cover Web 2.mp4"cover we type="video/mp4">
+      Browser kamu tidak mendukung video.
+    </video>
+
     <div class="overlay">
       <img src="images/logo destinasi.jpg" alt="Logo HiddenWestAceh">
       <div>
@@ -252,6 +225,16 @@
     <a href="#kuliner">Kuliner</a>
     <a href="#kontak">Kontak</a>
   </nav>
+
+  <!-- (Bagian lainnya tetap sama seperti sebelumnya: Beranda, Destinasi, Galeri, Kuliner, Footer, Partner) -->
+
+</body>
+</html>
+
+  </style>
+</head>
+
+<body>
 
   <!-- BERANDA -->
   <section id="beranda">
